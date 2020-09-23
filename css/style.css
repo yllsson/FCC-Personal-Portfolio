@@ -1,6 +1,18 @@
+/* Fonts */
+
+@font-face{
+  font-family: 'Exo 2';
+  src: url("../fonts/Exo_2/Exo2-VariableFont_wght.ttf");
+}
+
+
+/* general style */
+
 body {
   margin: 0;
   padding: 0;
+  
+  font-family: 'Exo 2', sans-serif;
 }
 
 
@@ -9,7 +21,7 @@ body {
 #navbar {
   position: fixed;
   top: 0;
-  height: 5vh;
+  height: 10vh;
   width: 100%;
 
   display: flex;
@@ -19,12 +31,28 @@ body {
   background-color: #931a25;
 }
 
+#navbar li {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  height: 10vh;
+  font-size: 1.2em;
+  margin-right: 3em;
+  padding: 0 1em;
+}
+
 #navbar a {
   text-decoration: none;
   color: #f5efef;
-  padding: 2em;
 }
 
+#navbar a:hover {
+  color: #ffcb8e;
+}
+
+#navbar li:hover {
+  background-color:  #75161e;
+}
 
 /* main */
 
@@ -50,7 +78,14 @@ main {
 
   background-color: #333333;
   color: #f5efef;
+  font-family: 'Exo 2', sans-serif;
 }
+
+h1 {
+  font-size: 5em;
+  font-weight: bold;
+}
+
 
 /* projects section */
 
@@ -100,3 +135,5 @@ main {
   text-decoration: none;
   color: #f5efef;
 }
+
+/* I want to add a "Back to top" button! */
