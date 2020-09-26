@@ -28,7 +28,7 @@ body {
   justify-content: flex-end;
   align-items: center;
 
-  background-color: #931a25;
+  background-color: #7d0633;
 }
 
 #navbar li {
@@ -47,11 +47,11 @@ body {
 }
 
 #navbar a:hover {
-  color: #ffcb8e;
+  color: #f2a07b;
 }
 
 #navbar li:hover {
-  background-color:  #75161e;
+  background-color:  #66062b;
 }
 
 /* main */
@@ -76,7 +76,7 @@ main {
   justify-content: center;
   align-items: center;
 
-  background-color: #333333;
+  background-color: #31112c;
   color: #f5efef;
   font-family: 'Exo 2', sans-serif;
 }
@@ -89,21 +89,66 @@ h1 {
 
 /* projects section */
 
+#projects h2 {
+  grid-area: header;
+  justify-self: center;
+  align-self: center;
+
+  font-size: 3em;
+}
+
+.playful {
+  grid-area: playful;
+}
+
+.techDoc {
+  grid-area: techDoc;
+}
+
+.cocomotion {
+  grid-area: cocomotion;
+}
+
+.surveyForm {
+  grid-area: surveyForm;
+}
+
 #projects {
-  height: 100vh;
   width: 100vw;
 
   /* make this grid instead of flex? or potentially carousel? */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-areas: ". header header ."
+    ". playful techDoc ."
+    ". cocomotion surveyForm .";
+  
+  background-color: #f5efef;
+  color: #333333;
+}
+
+.project-tile {
+  padding: 1.5em;
+  margin: 1em;
+  background-color: #f2a07b;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.project-tile {
-  padding: 2em;
-  margin: 1em;
-  background-color: #ffcb8e;
+.project-tile img {
+  width: 20vw;
+}
+
+.project-tile a {
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 4vh;
+  font-size: 1.5em;
+  color: black;
 }
 
 /* contact section */
@@ -117,8 +162,8 @@ h1 {
   justify-content: center;
   align-items: center;
 
-  color: #f5efef;
-  background-color: #e97171;
+  background-color: #fbdcc4;
+  color: #333333;
 }
 
 #contact-link-container {
@@ -133,7 +178,7 @@ h1 {
   padding: 1em;
   
   text-decoration: none;
-  color: #f5efef;
+  color: #333333;
 }
 
 /* I want to add a "Back to top" button! */
