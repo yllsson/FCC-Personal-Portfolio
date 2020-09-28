@@ -84,6 +84,11 @@ main {
 h1 {
   font-size: 5em;
   font-weight: bold;
+  margin: 2vh;
+}
+
+#welcome-section p {
+  font-size: 1.6em;
 }
 
 
@@ -116,7 +121,6 @@ h1 {
 #projects {
   width: 100vw;
 
-  /* make this grid instead of flex? or potentially carousel? */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 2fr 2fr;
