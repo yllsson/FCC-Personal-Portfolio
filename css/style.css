@@ -122,37 +122,45 @@ h1 {
   width: 100vw;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 0.5fr;
   grid-template-areas: ". header header ."
     ". playful techDoc ."
     ". cocomotion surveyForm .";
+  gap: 4em;
   
-  background-color: #f5efef;
+  background-color: floralwhite;
   color: #333333;
 }
 
 .project-tile {
-  padding: 1.5em;
-  margin: 1em;
-  background-color: #f2a07b;
+  /* padding: 1.5em; */
+  margin: 0;
+  background-color: rgb(255, 240, 210);
+  height: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  color: #333333;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.19);
+  /* border: 1px solid #333333; */
+}
+
+.project-tile figcaption {
+  margin-bottom: 1em;
 }
 
 .project-tile img {
   width: 20vw;
 }
 
-.project-tile a {
+#projects a {
   text-align: center;
   text-decoration: none;
-  margin-bottom: 4vh;
   font-size: 1.5em;
-  color: black;
 }
 
 /* contact section */
