@@ -34,6 +34,11 @@ h2 {
   background-color: #7d0633;
 }
 
+#navbar ul {
+  margin: 0;
+  padding: 0;
+}
+
 #navbar li {
   display: inline-flex;
   flex-direction: row;
@@ -47,10 +52,6 @@ h2 {
 #navbar a {
   text-decoration: none;
   color: #f5efef;
-}
-
-#navbar a:hover {
-  color: #f2a07b;
 }
 
 #navbar li:hover {
@@ -131,13 +132,12 @@ h1 {
     ". cocomotion surveyForm .";
   gap: 4em;
   
-  background-color: floralwhite;
+  background-color: snow;
   color: #333333;
 }
 
 .project-tile {
   margin: 0;
-  background-color: rgb(255, 240, 210);
   height: 100%;
 
   display: flex;
@@ -145,13 +145,14 @@ h1 {
   justify-content: center;
   align-items: center;
 
-  color: #333333;
+  /* border: 1px solid #33333338; */
+  background-color: #7d0633;
+  color: snow;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.19);
 }
 
-.project-tile:active {
+/* .project-tile:hover {
   margin: 0;
-  background-color: rgb(255, 240, 210);
   height: 100%;
 
   display: flex;
@@ -159,9 +160,10 @@ h1 {
   justify-content: center;
   align-items: center;
 
-  color: #333333;
+  color:snow;
   box-shadow: 10px 10px 10px rgba(0,0,0,0);
-}
+  background-color: #7d0633;
+} */
 
 .project-tile figcaption {
   margin-bottom: 1em;
@@ -180,16 +182,17 @@ h1 {
 /* contact section */
 
 #contact {
-  height: 100vh;
+  height: 88vh;
   width: 100vw;
+  position: relative;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  background-color: #fbdcc4;
-  color: #333333;
+  background-color: #31112c;
+  color: floralwhite;
 }
 
 #contact-link-container {
@@ -202,11 +205,22 @@ h1 {
 
 #contact-link-container a {
   padding: 1em;
-
   font-size: 1.5em;
   
   text-decoration: none;
-  color: #333333;
+  color: floralwhite;
+}
+
+.button {
+  position: absolute;
+  bottom: 5em;
+  right: 5em;
+  padding: 1em;
+
+  text-decoration: none;
+  background-color: #7d0634;
+  color: #f5efef;
+
 }
 
 /* I want to add a "Back to top" button! */
