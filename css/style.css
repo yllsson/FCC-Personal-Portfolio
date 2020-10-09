@@ -146,9 +146,9 @@ h1 {
   align-items: center;
 
   /* border: 1px solid #33333338; */
-  background-color: #7d0633;
-  color: snow;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.19);
+  background-color: snow;
+  color: #333333;
+  box-shadow: 4px 5px 10px rgba(0,0,0,0.19);
 }
 
 /* .project-tile:hover {
