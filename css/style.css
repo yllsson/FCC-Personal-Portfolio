@@ -80,7 +80,12 @@ main {
   justify-content: center;
   align-items: center;
 
-  background-color: #31112c;
+  background-image: linear-gradient(
+    rgba(105, 39, 95, 0.5),
+    rgb(51, 18, 46, 0.5)
+    ),
+    url("../pics/coding2.jpg");
+  background-size: cover;
   color: #f5efef;
   font-family: 'Exo 2', sans-serif;
 }
@@ -145,9 +150,10 @@ h1 {
   justify-content: center;
   align-items: center;
 
-  /* border: 1px solid #33333338; */
-  background-color: snow;
-  color: #333333;
+  background-color: #7d0633;
+  color: snow;
+  /* border: 5px solid;
+  border-color: #7d0633 snow snow snow; */
   box-shadow: 4px 5px 10px rgba(0,0,0,0.19);
 }
 
@@ -166,7 +172,38 @@ h1 {
 } */
 
 .project-tile figcaption {
-  margin-bottom: 1em;
+  margin: 0.5em 0;
+  font-size: 1em;
+  text-justify: center;
+}
+
+.project-tile div {
+  width: 100%;
+  height: 100%;
+}
+
+#playful {
+  background-image: url("../pics/playful.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#techDoc {
+  background-image: url("../pics/techDoc.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#cocomotion {
+  background-image: url("../pics/cocomotion.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#surveyForm {
+  background-image: url("../pics/surveyForm.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .project-tile img {
