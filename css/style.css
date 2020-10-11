@@ -29,7 +29,7 @@
   #navbar {
     position: fixed;
     top: 0;
-    height: 10vh;
+    height: 8vh;
     width: 100%;
 
     display: flex;
@@ -48,7 +48,7 @@
     display: inline-flex;
     flex-direction: row;
     align-items: center;
-    height: 10vh;
+    height: 8vh;
     font-size: 1.2em;
     margin-right: 3em;
     padding: 0 1em;
@@ -181,25 +181,25 @@
     }
 
     #playful {
-      background-image: url("../pics/playful.png");
+      background-image: url("../pics/playful2.png");
       background-size: cover;
       background-position: center;
     }
 
     #techDoc {
-      background-image: url("../pics/techDoc.png");
+      background-image: url("../pics/techDoc2.png");
       background-size: cover;
       background-position: center;
     }
 
     #cocomotion {
-      background-image: url("../pics/cocomotion.png");
+      background-image: url("../pics/cocomotion2.png");
       background-size: cover;
       background-position: center;
     }
 
     #surveyForm {
-      background-image: url("../pics/surveyForm.png");
+      background-image: url("../pics/surveyForm2.png");
       background-size: cover;
       background-position: center;
     }
