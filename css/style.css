@@ -1,338 +1,347 @@
+/* this site is styled for mobile first - see media queries at the bottom of the page */
+
+
 /* Fonts */
 
-@font-face{
-  font-family: 'Exo 2';
-  src: url("../fonts/Exo_2/Exo2-VariableFont_wght.ttf");
-}
-
-
-/* colours:
-  deep purple: #31112c
-  navbar pink: #7d0633
-  white bg + text: snow
-  charcoal text: #333333
-*/
+  @font-face{
+    font-family: 'Exo 2';
+    src: url("../fonts/Exo_2/Exo2-VariableFont_wght.ttf");
+  }
 
 
 /* general style */
 
-body {
-  margin: 0;
-  padding: 0;
-  
-  font-family: 'Exo 2', sans-serif;
-}
+  body {
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Exo 2', sans-serif;
+  }
 
-h2 {
-  font-size: 2em;
-}
+  h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+
 
 /* navbar */
 
-#navbar {
-  position: fixed;
-  top: 0;
-  height: 10vh;
-  width: 100%;
+  #navbar {
+    position: fixed;
+    top: 0;
+    height: 10vh;
+    width: 100%;
 
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
-  background-color: #7d0633;
-}
+    background-color: #7d0633;
+  }
 
-#navbar ul {
-  margin: 0;
-  padding: 0;
-}
+  #navbar ul {
+    margin: 0;
+    padding: 0;
+  }
 
-#navbar li {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  height: 10vh;
-  font-size: 1.2em;
-  margin-right: 3em;
-  padding: 0 1em;
-}
+  #navbar li {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10vh;
+    font-size: 1.2em;
+    margin-right: 3em;
+    padding: 0 1em;
+  }
 
-#navbar a {
-  text-decoration: none;
-  color: #f5efef;
-}
+  #navbar a {
+    text-decoration: none;
+    color: #f5efef;
+  }
 
-#navbar li:hover {
-  background-color:  #66062b;
-}
+  #navbar li:hover {
+    background-color:  #66062b;
+  }
+
 
 /* main */
 
-main {
-  margin-top: 5vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  main {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
 
 /* welcome section */
 
-#welcome-section {
-  height: 100vh;
-  width: 100vw;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  background-image: linear-gradient(
-    rgba(105, 39, 95, 0.5),
-    rgb(51, 18, 46, 0.5)
-    ),
-    url("../pics/coding2.jpg");
-  background-size: cover;
-  color: #f5efef;
-  font-family: 'Exo 2', sans-serif;
-}
-
-h1 {
-  font-size: 5em;
-  font-weight: bold;
-  margin: 2vh;
-  text-align: center;
-}
-
-#welcome-section p {
-  font-size: 1.6em;
-}
-
-
-/* projects section */
-
-  /* grid */
-  
-  #projects h2 {
-    grid-area: header;
-    justify-self: center;
-    align-self: center;
-  }
-
-  .playful {
-    grid-area: playful;
-  }
-
-  .techDoc {
-    grid-area: techDoc;
-  }
-
-  .cocomotion {
-    grid-area: cocomotion;
-  }
-
-  .surveyForm {
-    grid-area: surveyForm;
-  }
-
-  #projects {
-    /* this is styled for mobile first - see media queries at the bottom of the page */
+  #welcome-section {
+    height: 100vh;
     width: 100vw;
-
-    display: grid;
-    grid-template-columns: 0.1fr 1fr 0.1fr;
-    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 0.5fr;
-    grid-template-areas: ". header ."
-      ". playful ."
-      ". techDoc ."
-      ". cocomotion ." 
-      ". surveyForm ."
-      ". . .";
-    gap: 4em;
-    
-    background-color: snow;
-    color: #333333;
-  }
-
-
-  /* project tiles */
-
-  .project-tile {
-    margin: 0;
-    height: 100%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    background-color: #7d0633;
-    color: snow;
-    box-shadow: 4px 5px 10px rgba(0,0,0,0.19);
-  }
-
-  .project-tile figcaption {
-    margin: 0.7em 0;
-    font-size: 0.7em;
-    text-justify: center;
-  }
-
-  .project-tile div {
-    width: 100%;
-    height: 100%;
-  }
-
-  #playful {
-    background-image: url("../pics/playful.png");
+    background-image: linear-gradient(
+      rgba(105, 39, 95, 0.5),
+      rgb(51, 18, 46, 0.5)
+      ),
+      url("../pics/coding2.jpg");
     background-size: cover;
-    background-position: center;
+    color: #f5efef;
+    font-family: 'Exo 2', sans-serif;
   }
 
-  #techDoc {
-    background-image: url("../pics/techDoc.png");
-    background-size: cover;
-    background-position: center;
-  }
-
-  #cocomotion {
-    background-image: url("../pics/cocomotion.png");
-    background-size: cover;
-    background-position: center;
-  }
-
-  #surveyForm {
-    background-image: url("../pics/surveyForm.png");
-    background-size: cover;
-    background-position: center;
-  }
-
-  #projects a {
+  h1 {
+    font-size: 5em;
+    font-weight: bold;
+    margin: 2vh;
     text-align: center;
-    text-decoration: none;
-    font-size: 1.5em;
   }
 
-/* contact section */
+  #welcome-section p {
+    font-size: 1.6em;
+  }
 
-#contact {
-  height: 88vh;
-  width: 100vw;
-  position: relative;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* projects section */
 
-  background-color: #333333;
-  color: snow;
-}
-
-#contact-link-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#contact-link-container a {
-  padding: 1em;
-  font-size: 1.5em;
+  /* grid */
   
-  text-decoration: none;
-  color: snow;
-}
-
-.button {
-  position: absolute;
-  bottom: 5em;
-  right: 5em;
-  padding: 1em;
-
-  text-decoration: none;
-  background-color: #7d0634;
-  color: #f5efef;
-
-}
-
-/* Media Queries */
-
-  /* tablets */
-  @media only screen and (min-width: 450px){
-    .project-tile figcaption {
-      margin: 0.7em 0;
-      font-size: 0.9em;
-      text-justify: center;
+    #projects h2 {
+      grid-area: header;
+      justify-self: center;
+      align-self: center;
     }
 
-    h2 {
-      font-size: 3em;
+    .playful {
+      grid-area: playful;
     }
-  }
 
-  @media only screen and (min-width: 710px){
-    #contact-link-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
+    .techDoc {
+      grid-area: techDoc;
     }
-  }
 
-  /* large tablets (ipad pro) */
-  @media only screen and (min-width: 1000px){
+    .cocomotion {
+      grid-area: cocomotion;
+    }
+
+    .surveyForm {
+      grid-area: surveyForm;
+    }
+
     #projects {
       width: 100vw;
 
       display: grid;
       grid-template-columns: 0.1fr 1fr 0.1fr;
-      grid-template-rows: 1fr 3fr 3fr 3fr 3fr 0.5fr;
+      grid-template-rows: 0.2fr 2fr 2fr 2fr 2fr 0.5fr;
       grid-template-areas: ". header ."
         ". playful ."
         ". techDoc ."
         ". cocomotion ." 
         ". surveyForm ."
         ". . .";
-      gap: 4em;
+      gap: 3em;
       
       background-color: snow;
       color: #333333;
     }
+
+
+  /* project tiles */
+
+    .project-tile {
+      margin: 0;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      background-color: #7d0633;
+      color: snow;
+      box-shadow: 4px 5px 10px rgba(0,0,0,0.19);
+    }
+
+    .project-tile figcaption {
+      margin: 0.7em 0;
+      font-size: 0.7em;
+      text-justify: center;
+    }
+
+    .project-tile div {
+      width: 100%;
+      height: 100%;
+    }
+
+    #playful {
+      background-image: url("../pics/playful.png");
+      background-size: cover;
+      background-position: center;
+    }
+
+    #techDoc {
+      background-image: url("../pics/techDoc.png");
+      background-size: cover;
+      background-position: center;
+    }
+
+    #cocomotion {
+      background-image: url("../pics/cocomotion.png");
+      background-size: cover;
+      background-position: center;
+    }
+
+    #surveyForm {
+      background-image: url("../pics/surveyForm.png");
+      background-size: cover;
+      background-position: center;
+    }
+
+    #projects a {
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.5em;
+    }
+
+
+/* contact section */
+
+  #contact {
+    height: 70vh;
+    width: 100vw;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #333333;
+    color: snow;
   }
+
+  #contact-link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #contact-link-container a {
+    padding: 1em;
+    font-size: 1.5em;
+    
+    text-decoration: none;
+    color: snow;
+  }
+
+  .button {
+    display: none;
+
+    position: absolute;
+    bottom: 5em;
+    right: 5em;
+    padding: 1em;
+
+    text-decoration: none;
+    background-color: #7d0634;
+    color: #f5efef;
+  }
+
+/* Media Queries */
+
+  /* tablets */
+    @media only screen and (min-width: 450px){
+      .project-tile figcaption {
+        margin: 0.7em 0;
+        font-size: 0.9em;
+        text-justify: center;
+      }
+
+      h2 {
+        font-size: 3em;
+      }
+    }
+
+    @media only screen and (min-width: 710px){
+      #contact-link-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .button {
+        display: block;
+    
+        position: absolute;
+        bottom: 5em;
+        right: 5em;
+        padding: 1em;
+    
+        text-decoration: none;
+        background-color: #7d0634;
+        color: #f5efef;
+      }
+
+      #projects {
+        width: 100vw;
+
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 0.1fr;
+        grid-template-rows: 1fr 3fr 3fr 3fr 3fr 0.5fr;
+        grid-template-areas: ". header ."
+          ". playful ."
+          ". techDoc ."
+          ". cocomotion ." 
+          ". surveyForm ."
+          ". . .";
+        gap: 4em;
+        
+        background-color: snow;
+        color: #333333;
+      }
+    }
 
   /* laptops */
-  @media only screen and (min-width: 1200px){
-    #projects {
-      width: 100vw;
+    @media only screen and (min-width: 1200px){
+      #projects {
+        width: 100vw;
 
-      display: grid;
-      grid-template-columns: 1fr 2fr 2fr 1fr;
-      grid-template-rows: 1fr 2fr 2fr 0.5fr;
-      grid-template-areas: ". header header ."
-        ". playful techDoc ."
-        ". cocomotion surveyForm .";
-      gap: 4em;
-      
-      background-color: snow;
-      color: #333333;
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr 0.5fr;
+        grid-template-areas: ". header header ."
+          ". playful techDoc ."
+          ". cocomotion surveyForm .";
+        gap: 4em;
+        
+        background-color: snow;
+        color: #333333;
+      }
     }
-  }
 
   /* bigger desktop screen */
-  @media only screen and (min-width: 1550px){
-    #projects {
-      width: 100vw;
+    @media only screen and (min-width: 1550px){
+      #projects {
+        width: 100vw;
 
-      display: grid;
-      grid-template-columns: 1fr 2fr 2fr 1fr;
-      grid-template-rows: 1fr 3fr 3fr 0.5fr;
-      grid-template-areas: ". header header ."
-        ". playful techDoc ."
-        ". cocomotion surveyForm .";
-      gap: 4em;
-      
-      background-color: snow;
-      color: #333333;
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: 1fr 3fr 3fr 0.5fr;
+        grid-template-areas: ". header header ."
+          ". playful techDoc ."
+          ". cocomotion surveyForm .";
+        gap: 4em;
+        
+        background-color: snow;
+        color: #333333;
+      }
     }
-  }
