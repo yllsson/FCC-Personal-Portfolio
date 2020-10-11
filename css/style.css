@@ -24,7 +24,7 @@ body {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 2em;
 }
 
 /* navbar */
@@ -102,6 +102,7 @@ h1 {
   font-size: 5em;
   font-weight: bold;
   margin: 2vh;
+  text-align: center;
 }
 
 #welcome-section p {
@@ -111,118 +112,106 @@ h1 {
 
 /* projects section */
 
-#projects h2 {
-  grid-area: header;
-  justify-self: center;
-  align-self: center;
-
-}
-
-.playful {
-  grid-area: playful;
-}
-
-.techDoc {
-  grid-area: techDoc;
-}
-
-.cocomotion {
-  grid-area: cocomotion;
-}
-
-.surveyForm {
-  grid-area: surveyForm;
-}
-
-#projects {
-  width: 100vw;
-
-  display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
-  grid-template-rows: 1fr 2fr 2fr 0.5fr;
-  grid-template-areas: ". header header ."
-    ". playful techDoc ."
-    ". cocomotion surveyForm .";
-  gap: 4em;
+  /* grid */
   
-  background-color: snow;
-  color: #333333;
-}
+  #projects h2 {
+    grid-area: header;
+    justify-self: center;
+    align-self: center;
+  }
 
-.project-tile {
-  margin: 0;
-  height: 100%;
+  .playful {
+    grid-area: playful;
+  }
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .techDoc {
+    grid-area: techDoc;
+  }
 
-  background-color: #7d0633;
-  color: snow;
-  /* border: 5px solid;
-  border-color: #7d0633 snow snow snow; */
-  box-shadow: 4px 5px 10px rgba(0,0,0,0.19);
-}
+  .cocomotion {
+    grid-area: cocomotion;
+  }
 
-/* .project-tile:hover {
-  margin: 0;
-  height: 100%;
+  .surveyForm {
+    grid-area: surveyForm;
+  }
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  #projects {
+    /* this is styled for mobile first - see media queries at the bottom of the page */
+    width: 100vw;
 
-  color:snow;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0);
-  background-color: #7d0633;
-} */
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 0.5fr;
+    grid-template-areas: ". header ."
+      ". playful ."
+      ". techDoc ."
+      ". cocomotion ." 
+      ". surveyForm ."
+      ". . .";
+    gap: 4em;
+    
+    background-color: snow;
+    color: #333333;
+  }
 
-.project-tile figcaption {
-  margin: 0.7em 0;
-  font-size: 0.9em;
-  text-justify: center;
-}
 
-.project-tile div {
-  width: 100%;
-  height: 100%;
-}
+  /* project tiles */
 
-#playful {
-  background-image: url("../pics/playful.png");
-  background-size: cover;
-  background-position: center;
-}
+  .project-tile {
+    margin: 0;
+    height: 100%;
 
-#techDoc {
-  background-image: url("../pics/techDoc.png");
-  background-size: cover;
-  background-position: center;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-#cocomotion {
-  background-image: url("../pics/cocomotion.png");
-  background-size: cover;
-  background-position: center;
-}
+    background-color: #7d0633;
+    color: snow;
+    box-shadow: 4px 5px 10px rgba(0,0,0,0.19);
+  }
 
-#surveyForm {
-  background-image: url("../pics/surveyForm.png");
-  background-size: cover;
-  background-position: center;
-}
+  .project-tile figcaption {
+    margin: 0.7em 0;
+    font-size: 0.7em;
+    text-justify: center;
+  }
 
-.project-tile img {
-  width: 20vw;
-}
+  .project-tile div {
+    width: 100%;
+    height: 100%;
+  }
 
-#projects a {
-  text-align: center;
-  text-decoration: none;
-  font-size: 1.5em;
-}
+  #playful {
+    background-image: url("../pics/playful.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  #techDoc {
+    background-image: url("../pics/techDoc.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  #cocomotion {
+    background-image: url("../pics/cocomotion.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  #surveyForm {
+    background-image: url("../pics/surveyForm.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  #projects a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
 
 /* contact section */
 
@@ -242,10 +231,9 @@ h1 {
 
 #contact-link-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 #contact-link-container a {
@@ -267,3 +255,84 @@ h1 {
   color: #f5efef;
 
 }
+
+/* Media Queries */
+
+  /* tablets */
+  @media only screen and (min-width: 450px){
+    .project-tile figcaption {
+      margin: 0.7em 0;
+      font-size: 0.9em;
+      text-justify: center;
+    }
+
+    h2 {
+      font-size: 3em;
+    }
+  }
+
+  @media only screen and (min-width: 710px){
+    #contact-link-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  /* large tablets (ipad pro) */
+  @media only screen and (min-width: 1000px){
+    #projects {
+      width: 100vw;
+
+      display: grid;
+      grid-template-columns: 0.1fr 1fr 0.1fr;
+      grid-template-rows: 1fr 3fr 3fr 3fr 3fr 0.5fr;
+      grid-template-areas: ". header ."
+        ". playful ."
+        ". techDoc ."
+        ". cocomotion ." 
+        ". surveyForm ."
+        ". . .";
+      gap: 4em;
+      
+      background-color: snow;
+      color: #333333;
+    }
+  }
+
+  /* laptops */
+  @media only screen and (min-width: 1200px){
+    #projects {
+      width: 100vw;
+
+      display: grid;
+      grid-template-columns: 1fr 2fr 2fr 1fr;
+      grid-template-rows: 1fr 2fr 2fr 0.5fr;
+      grid-template-areas: ". header header ."
+        ". playful techDoc ."
+        ". cocomotion surveyForm .";
+      gap: 4em;
+      
+      background-color: snow;
+      color: #333333;
+    }
+  }
+
+  /* bigger desktop screen */
+  @media only screen and (min-width: 1550px){
+    #projects {
+      width: 100vw;
+
+      display: grid;
+      grid-template-columns: 1fr 2fr 2fr 1fr;
+      grid-template-rows: 1fr 3fr 3fr 0.5fr;
+      grid-template-areas: ". header header ."
+        ". playful techDoc ."
+        ". cocomotion surveyForm .";
+      gap: 4em;
+      
+      background-color: snow;
+      color: #333333;
+    }
+  }
