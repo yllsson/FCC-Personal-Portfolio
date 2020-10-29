@@ -122,6 +122,10 @@
       grid-area: playful;
     }
 
+    .rockPaperScissors {
+      grid-area: rockPaperScissors;
+    }
+
     .techDoc {
       grid-area: techDoc;
     }
@@ -141,10 +145,10 @@
       grid-template-columns: 0.1fr 1fr 0.1fr;
       grid-template-rows: 0.2fr 2fr 2fr 2fr 2fr 0.5fr;
       grid-template-areas: ". header ."
+        ". rockPaperScissors ."
         ". playful ."
         ". techDoc ."
         ". cocomotion ." 
-        ". surveyForm ."
         ". . .";
       gap: 3em;
       
@@ -182,6 +186,12 @@
 
     #playful {
       background-image: url("../pics/playful2.png");
+      background-size: cover;
+      background-position: center;
+    }
+
+    #rockPaperScissors {
+      background-image: url("../pics/rockPaperScissors2.png");
       background-size: cover;
       background-position: center;
     }
@@ -298,11 +308,11 @@
         grid-template-columns: 0.1fr 1fr 0.1fr;
         grid-template-rows: 1fr 3fr 3fr 3fr 3fr 0.5fr;
         grid-template-areas: ". header ."
-          ". playful ."
-          ". techDoc ."
-          ". cocomotion ." 
-          ". surveyForm ."
-          ". . .";
+        ". rockPaperScissors ."
+        ". playful ."
+        ". techDoc ."
+        ". cocomotion ." 
+        ". . .";
         gap: 4em;
         
         background-color: snow;
@@ -319,8 +329,8 @@
         grid-template-columns: 1fr 2fr 2fr 1fr;
         grid-template-rows: 1fr 2fr 2fr 0.5fr;
         grid-template-areas: ". header header ."
-          ". playful techDoc ."
-          ". cocomotion surveyForm .";
+          ". rockPaperScissors playful ."
+          ". techDoc cocomotion  .";
         gap: 4em;
         
         background-color: snow;
@@ -337,8 +347,8 @@
         grid-template-columns: 1fr 2fr 2fr 1fr;
         grid-template-rows: 1fr 3fr 3fr 0.5fr;
         grid-template-areas: ". header header ."
-          ". playful techDoc ."
-          ". cocomotion surveyForm .";
+          ". rockPaperScissors playful ."
+          ". techDoc cocomotion  .";
         gap: 4em;
         
         background-color: snow;
